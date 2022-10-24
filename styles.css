@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500&family=Montserrat:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  background: #181719;
+  color: #ffffff;
+  max-width: 1440px;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  padding: 0 5%;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 42px 0;
+}
+
+.logo {
+  border: 1px solid #ffffff;
+  padding: 8px;
+
+  font-family: "Crimson Pro", monospace;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.hamburger,
+.cross {
+  display: none;
+  font-weight: bold;
+}
+
+.cross {
+  font-size: 14px;
+  padding: 1% 0;
+}
+
+.nav-item {
+  font-family: "Montserrat", monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 4px 0;
+  margin: 0 40px;
+}
+
+.nav-item:hover {
+  font-weight: 700;
+  border-bottom: 2px solid #ffffff;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 12% 0 20% 0;
+}
+
+.details {
+  margin-bottom: 10%;
+}
+
+.details h2 {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 61px;
+}
+
+.details p {
+  font-family: "Montserrat", monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  max-width: 410px;
+  margin: 10% 0;
+}
+
+.details .text {
+  font-family: "Montserrat", monospace;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  margin-right: 14px;
+}
+
+.arrow {
+  font-size: 21px;
+  font-family: Fantasy, Arial, Helvetica, sans-serif;
+}
+
+.design-img {
+  width: 100%;
+  max-width: 737px;
+  max-height: 555px;
+  height: auto;
+}
+
+.content {
+  position: relative;
+  padding: 2%;
+}
+
+.designer-card {
+  min-width: 300px;
+  max-width: 410px;
+  position: absolute;
+  bottom: -15%;
+  right: 6%;
+  background: #181719;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 5%;
+}
+
+.profile {
+  display: flex;
+  margin-bottom: 5%;
+}
+
+.profile img {
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+.profile div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-name {
+  font-family: "Montserrat", monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.profile-role {
+  font-family: "Montserrat", monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  width: 100%;
+  color: #828282;
+}
+
+.info {
+  font-family: "Lora", monospace;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+footer {
+  font-family: "Montserrat", monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #a9a9a9;
+  margin: 24px 0;
+}
+
+@media screen and (max-width: 720px) {
+  main {
+    flex-wrap: wrap;
+  }
+
+  .details h2 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .details p {
+    font-size: 14px;
+    line-height: 17px;
+    max-width: 250px;
+  }
+
+  .content {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    align-items: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .cross {
+    text-align: end;
+  }
+
+  .responsive {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #181719;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    padding: 42px 5%;
+  }
+
+  .responsive-nav-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .responsive-nav-ul li {
+    margin: 16px 0;
+  }
+  
+  .content {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    margin: 19px 0;
+  }
+
+  .responsive {
+    padding: 19px 5%;
+  }
+
+  .profile img {
+    max-width: 36.59px;
+    max-height: 36.59px;
+  }
+
+  .profile-name {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .profile-role {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .info {
+    font-size: 18px;
+    line-height: 23px;
+    max-width: 210px;
+  }
+
+  .details .text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
